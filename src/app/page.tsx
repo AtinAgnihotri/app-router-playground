@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { db } from "~/server/db";
 
 export const dynamic = "force-dynamic";
 
@@ -17,17 +18,22 @@ const mockImages = mockUrls.map((url, index) => ({
   url,
 }));
 
-export default function HomePage() {
+export default async function HomePage() {
+  const images = await db.query.images.findMany({
+    orderBy: (model, { desc }) => desc(model.id)
+  });
+
   return (
     <main className="">
-      <div className="flex flex-wrap gap-4">
-        {mockImages.map((image) => (
-          <div key={image.id} className="w-48">
+      <div className="mx-4 flex flex-wrap gap-4">
+        {images.map((image) => (
+          <div key={image.id} className="flex w-48 flex-col justify-between">
             <img
               src={image.url}
               alt={`Image ${image.id}`}
               className="rounded-lg shadow-lg"
             />
+            <div>{image.name}</div>
           </div>
         ))}
       </div>

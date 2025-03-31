@@ -3,8 +3,8 @@
 - [✅] Make it deploy (vercel)
 - [✅] Scaffold basic UI with mock data
 - [✅] Tidy up build process
-- [ ] Actually Setup a database (vercel postgres by neon)
-- [ ] Attach DB to UI
+- [✅] Actually Setup a database (vercel postgres by neon)
+- [✅] Attach DB to UI
 - [ ] Add auth with clerk
 - [ ] Add image upload
 - [ ] Error Management (Sentry)
