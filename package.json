@@ -10,7 +10,8 @@
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
-    "dev": "next dev --turbo",
+    "dev": "next dev",
+    "devt": "next dev --turbo",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "lint": "next lint",
@@ -23,11 +24,13 @@
     "@clerk/nextjs": "^6.12.12",
     "@neondatabase/serverless": "^1.0.0",
     "@t3-oss/env-nextjs": "^0.12.0",
+    "@uploadthing/react": "^7.3.0",
     "drizzle-orm": "^0.41.0",
     "next": "^15.2.3",
     "postgres": "^3.4.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "uploadthing": "7.5.2",
     "zod": "^3.24.2"
   },
   "devDependencies": {
