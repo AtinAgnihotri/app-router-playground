@@ -2,7 +2,7 @@
 
 [✅] Make it deploy (vercel)
 
-[ ] Scaffold basic UI with mock data
+[✅] Scaffold basic UI with mock data
 
 [ ] Actually Setup a database (vercel postgres)
 
